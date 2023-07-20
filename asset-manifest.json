@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/%7BKcal-app-react%7D/static/css/main.ca57846c.css",
+    "main.js": "/%7BKcal-app-react%7D/static/js/main.6aaa8c5a.js",
+    "index.html": "/%7BKcal-app-react%7D/index.html",
+    "main.ca57846c.css.map": "/%7BKcal-app-react%7D/static/css/main.ca57846c.css.map",
+    "main.6aaa8c5a.js.map": "/%7BKcal-app-react%7D/static/js/main.6aaa8c5a.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.ca57846c.css",
+    "static/js/main.6aaa8c5a.js"
+  ]
+}
