@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.css": "/%7Bkcal-app-react%7D/static/css/main.ca57846c.css",
-    "main.js": "/%7Bkcal-app-react%7D/static/js/main.6aaa8c5a.js",
-    "index.html": "/%7Bkcal-app-react%7D/index.html",
-    "main.ca57846c.css.map": "/%7Bkcal-app-react%7D/static/css/main.ca57846c.css.map",
-    "main.6aaa8c5a.js.map": "/%7Bkcal-app-react%7D/static/js/main.6aaa8c5a.js.map"
+    "main.css": "/kcal-app-react/static/css/main.ca57846c.css",
+    "main.js": "/kcal-app-react/static/js/main.6aaa8c5a.js",
+    "index.html": "/kcal-app-react/index.html",
+    "main.ca57846c.css.map": "/kcal-app-react/static/css/main.ca57846c.css.map",
+    "main.6aaa8c5a.js.map": "/kcal-app-react/static/js/main.6aaa8c5a.js.map"
   },
   "entrypoints": [
     "static/css/main.ca57846c.css",
