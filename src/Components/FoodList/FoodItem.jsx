@@ -24,7 +24,7 @@ export default function FoodItem({ data }) {
               <td>{ saturatedFat }</td>
             </tr>
             <tr>
-              <th>Carbonhydrates</th>
+              <th>Carbohydrates</th>
               <td>{ carbs }</td>
             </tr>
             <tr>
