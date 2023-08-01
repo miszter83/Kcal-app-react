@@ -1,5 +1,6 @@
 import React, { useState} from 'react';
 import './FoodNutritionForm.css';
+import { Button, FormGroup, Label, Input, Form } from 'reactstrap';
 
 export default function FoodNutritionForm({isNameUnique, addItem}) {
   const [foodName, setFoodName] = useState("");
@@ -24,13 +25,13 @@ export default function FoodNutritionForm({isNameUnique, addItem}) {
     if (isNameUnique(trimmedFoodName)) {
       addItem({
         foodName: trimmedFoodName, 
-        kcal,
-        fat, 
-        saturatedFat, 
-        carbs, 
-        sugar, 
-        protein, 
-        fiber
+        kcal: Number(kcal),
+        fat: Number(fat), 
+        saturatedFat: Number(saturatedFat), 
+        carbs: Number(carbs), 
+        sugar: Number(sugar), 
+        protein: Number(protein), 
+        fiber: Number(fiber)
       });
         setFoodName("");
         setKcal("");
@@ -70,24 +71,26 @@ export default function FoodNutritionForm({isNameUnique, addItem}) {
   }
 
   return (
-    <form onSubmit={handleSubmit}>
+    <Form onSubmit={handleSubmit} data-bs-theme="dark" className='nutrition-form'>
       { submitError }
       { submitSuccess }
-      <div className="form-row">
-        <label htmlFor="food-name">Food Name</label>
-        <input 
+      <FormGroup>
+        <Label htmlFor="food-name">Food Name</Label>
+        <Input 
           type="text"
+          className="nutrition-input"
           id="food-name" 
           name="food-name"
           value={foodName}
           onChange={handleChange(setFoodName)} 
           placeholder="Food Name" 
           required/>
-      </div>
-      <div className="form-row">
-        <label htmlFor="kcal">KCal</label>
-        <input 
+      </FormGroup>
+      <FormGroup>
+        <Label htmlFor="kcal">KCal</Label>
+        <Input 
           type="number" 
+          className="nutrition-input"
           id="kcal-input" 
           name="kcal" 
           placeholder="KCal"
@@ -96,11 +99,12 @@ export default function FoodNutritionForm({isNameUnique, addItem}) {
           min="0.0"
           step="0.1" 
           required/>
-      </div>
-      <div className="form-row">
-        <label htmlFor="fat-input">Fat</label>
-        <input 
+      </FormGroup>
+      <FormGroup>
+        <Label htmlFor="fat-input">Fat</Label>
+        <Input 
           type="number"  
+          className="nutrition-input"
           id="fat-input" 
           name="fat" 
           placeholder="Fat" 
@@ -109,11 +113,12 @@ export default function FoodNutritionForm({isNameUnique, addItem}) {
           min="0"
           step="0.1"  
           required/>
-      </div>
-      <div className="form-row">
-        <label htmlFor="saturated-fat-input">Saturated Fat</label>
-        <input 
+      </FormGroup>
+      <FormGroup>
+        <Label htmlFor="saturated-fat-input">Saturated Fat</Label>
+        <Input  
           type="number"  
+          className="nutrition-input"
           id="saturated-fat-input" 
           name="saturated-fat" 
           placeholder="Saturated Fat" 
@@ -122,11 +127,12 @@ export default function FoodNutritionForm({isNameUnique, addItem}) {
           min="0"
           step="0.1"  
           required/>
-      </div>
-      <div className="form-row">
-        <label htmlFor="carbs-input">Carbohydrates</label>
-        <input 
+      </FormGroup>
+      <FormGroup>
+        <Label htmlFor="carbs-input">Carbohydrates</Label>
+        <Input 
           type="number"  
+          className="nutrition-input"
           id="carbs-input" 
           name="carbs" 
           placeholder="Carbohydrates"
@@ -135,11 +141,12 @@ export default function FoodNutritionForm({isNameUnique, addItem}) {
           min="0"
           step="0.1"  
           required/>
-      </div>
-      <div className="form-row">
-        <label htmlFor="sugar-input">Sugar</label>
-        <input 
+      </FormGroup>
+      <FormGroup>
+        <Label htmlFor="sugar-input">Sugar</Label>
+        <Input 
           type="number" 
+          className="nutrition-input"
           id="sugar-input"
           name="sugar" 
           placeholder="Sugar" 
@@ -148,11 +155,12 @@ export default function FoodNutritionForm({isNameUnique, addItem}) {
           min="0" 
           step="0.1" 
           required/>
-      </div>
-      <div className="form-row">
-        <label htmlFor="protein-input">Protein</label>
-        <input 
+      </FormGroup>
+      <FormGroup>
+        <Label htmlFor="protein-input">Protein</Label>
+        <Input 
           type="number"  
+          className="nutrition-input"
           id="protein-input" 
           name="protein" 
           placeholder="Protein" 
@@ -161,11 +169,12 @@ export default function FoodNutritionForm({isNameUnique, addItem}) {
           min="0" 
           step="0.1" 
           required/>
-      </div>
-      <div className="form-row">
-        <label htmlFor="fiber-input">Fiber</label>
-        <input 
+      </FormGroup>
+      <FormGroup>
+        <Label htmlFor="fiber-input">Fiber</Label>
+        <Input 
           type="number"  
+          className="nutrition-input"
           id="fiber-input" 
           name="fiber" 
           placeholder="Fiber" 
@@ -174,11 +183,11 @@ export default function FoodNutritionForm({isNameUnique, addItem}) {
           min="0" 
           step="0.1" 
           required/>
-      </div>
+      </FormGroup>
       <div className="form-row">
-        <button type="submit">Add</button>
+        <Button type="submit" size="lg" color="primary">Add</Button>
       </div>
-    </form>
+    </Form>
   );
 }
 

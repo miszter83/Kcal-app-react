@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import FoodList from './Components/FoodList/FoodList';
 import FoodNutritionForm from './Components/FoodNutritionForm/FoodNutritionForm';
 
+
 export default function App() {
   const[foodItems, setFoodItems] = useState([
       {
@@ -53,11 +54,9 @@ export default function App() {
 
   return (
     <div className="App">
-      <header className="App-header">
         <h1>Kcal App</h1>
         <FoodNutritionForm isNameUnique={isNameUnique} addItem={addItem}/>
         <FoodList foodItems={foodItems}/>
-      </header>
     </div>
   );
 }
