@@ -37,9 +37,17 @@ export default function App() {
         protein: 3.1,
       }
   ]);
+  /**
+   * PRE: trimmedItemName is trimmed.
+   */
+    function isNameUnique(trimmedItemName) {
+      return !foodItems.some(item => item.foodName === trimmedItemName);
+    }
 
+    function addItem(item) {
+      setFoodItems(oldFoodItems => [...oldFoodItems, item]);
 
-  
+    }
 
 
 
@@ -47,7 +55,7 @@ export default function App() {
     <div className="App">
       <header className="App-header">
         <h1>Kcal App</h1>
-        <FoodNutritionForm />
+        <FoodNutritionForm isNameUnique={isNameUnique} addItem={addItem}/>
         <FoodList foodItems={foodItems}/>
       </header>
     </div>
