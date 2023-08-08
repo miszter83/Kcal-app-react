@@ -3,7 +3,7 @@ import FoodItem from './FoodItem';
 import'./FoodList.css';
 
 export default function FoodList({ foodItems }) {
-    let FoodItemListJsx = foodItems.map(item => <FoodItem data ={item} key={ item.foodName} />);
+    let FoodItemListJsx = foodItems.map(item => <FoodItem data ={item} key={ item.id } />);
     return (
     <ul className="food-list-container">
       { FoodItemListJsx }
